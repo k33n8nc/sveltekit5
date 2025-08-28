@@ -2,12 +2,12 @@
     import { getPosts } from './data.remote';
 </script>
 
-<h1>Recent posts</h1>
+<h1 class="text-xl">Recent posts</h1>
 
 <svelte:boundary>
     <ul>
         {#each await getPosts() as { id, title }}
-            <li><a href="/blog/{id}">{title}</a></li>
+            <li class="underline"><a href="/blog/{id}">{title}</a></li>
         {/each}
     </ul>
 
