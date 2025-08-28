@@ -12,9 +12,9 @@
 <div class="bg-gray-200">
 	<div class="container mx-auto mb-4">
 		<ul class="flex items-center gap-4 h-14">
-			<li><a href="/">dashboard</a></li>
-			<li><a href="/customers">customers</a></li>
-			<li><a href="/registrations">registrations</a></li>
+			<li><a href="/">home</a></li>
+			<li><a href="/todo">todo</a></li>
+			<li><a href="/gsap">gsap</a></li>
 		</ul>
 	</div>
 </div>

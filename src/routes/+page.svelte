@@ -1,8 +1,19 @@
-<div class="container mx-auto">
-    <h1>Effect component:</h1>
-    <Effect />
-</div>
+<script>
+    import { gsap } from 'gsap'
 
-<script lang="ts">
-    import Effect from '../components/Effect.svelte'
+    const rotateMe = () => {
+        return (element) => {
+            gsap.to(element, {rotation: 360, duration: 2})
+            return () => gsap.killTweensOf(element)
+        }
+    }
+
 </script>
+
+<div class="container mx-auto">
+    <div
+            {@attach rotateMe()}
+            class="w-10 h-10 bg-blue-500 rounded"
+    >
+    </div>
+</div>

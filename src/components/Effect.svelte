@@ -10,7 +10,7 @@
     console.log('log from <script> root')
 
     $effect(()=>{
-        console.log('log from $effect(()=>)');
+        console.log('log from $effect(()=> root)');
 
         return () => {
             console.log('log from $effect return () => {}');
