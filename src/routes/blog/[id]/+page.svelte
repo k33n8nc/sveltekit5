@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     /** @type {import('./$types').PageProps} */
     let { data } = $props();
 </script>

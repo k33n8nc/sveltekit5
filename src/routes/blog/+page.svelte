@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import { getPosts } from './data.remote';
 </script>
 
