@@ -3,17 +3,17 @@
     let { params } = $props();
 </script>
 
-<h1 class="text-xl">Recent posts</h1>
-
 <svelte:boundary>
-    {#await getPost(Number(params.id))}
-        <p>Loading post...</p>
-    {:then post}
-        <h1>{post.title}</h1>
-        <div>{@html post.content}</div>
-    {:catch error}
-        <p>Error loading post: {error.message}</p>
-    {/await}
+    <main class="my-4">
+        {#await getPost(Number(params.id))}
+            <p>Loading post...</p>
+        {:then post}
+            <h1 class="text-xl mb-1">{post.title}</h1>
+            <div>{@html post.content}</div>
+        {:catch error}
+            <p>Error loading post: {error.message}</p>
+        {/await}
+    </main>
 </svelte:boundary>
 
-<a href="/blog">back</a>
+<a href="/blog" class="bg-slate-300 px-3 py-2 rounded">back</a>

@@ -9,7 +9,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="bg-gray-200">
+<div class="bg-gray-800 text-white">
 	<div class="container mx-auto mb-4">
 		<ul class="flex items-center gap-4 h-14">
 			<li><a href="/">home</a></li>
