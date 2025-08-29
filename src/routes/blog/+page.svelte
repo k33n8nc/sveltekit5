@@ -15,3 +15,7 @@
         <p>loading...</p>
     {/snippet}
 </svelte:boundary>
+
+<button onclick={() => getPosts().refresh()} class="bg-purple-300 px-3 py-2 rounded cursor-pointer">
+    call getPosts().refresh()
+</button>

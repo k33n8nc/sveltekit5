@@ -11,7 +11,7 @@ export async function load({ params }) {
 	`;
 
     if (!post) {
-        throw error(404, 'Not found');
+        throw error(404, 'No posts found');
     }
 
 	return {
