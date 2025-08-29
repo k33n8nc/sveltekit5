@@ -1,11 +1,19 @@
 <script lang="ts">
-    /** @type {import('./$types').PageProps} */
-    let { data } = $props();
+    import { getPost } from '../data.remote';
+    let { params } = $props();
 </script>
 
-<h1 class="text-xl">{data.post.title}</h1>
+<h1 class="text-xl">Recent posts</h1>
 
-<div class="flex flex-col gap-1">
-    {@html data.post.content}
-    <a href="/blog" class="underline">back</a>
-</div>
+<svelte:boundary>
+    {#await getPost(Number(params.id))}
+        <p>Loading post...</p>
+    {:then post}
+        <h1>{post.title}</h1>
+        <div>{@html post.content}</div>
+    {:catch error}
+        <p>Error loading post: {error.message}</p>
+    {/await}
+</svelte:boundary>
+
+<a href="/blog">back</a>
