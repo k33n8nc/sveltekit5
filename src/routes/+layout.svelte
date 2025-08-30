@@ -14,6 +14,7 @@
 		<ul class="flex items-center gap-4 h-14">
 			<li><a href="/">home</a></li>
 			<li><a href="/blog">blog</a></li>
+			<li><a href="/blog/new">new post</a></li>
 		</ul>
 	</div>
 </div>
